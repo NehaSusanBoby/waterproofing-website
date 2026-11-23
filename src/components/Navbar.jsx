@@ -1,13 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { site } from '../data/site.js'
-
-const links = [
-  { to: '/', label: 'Home' },
-  { to: '/services', label: 'Services' },
-  { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact' },
-]
+import { site, navLinks } from '../data/site.js'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -28,7 +21,7 @@ export default function Navbar() {
           ☰
         </button>
         <nav className={`navbar__links ${open ? 'is-open' : ''}`}>
-          {links.map((l) => (
+          {navLinks.map((l) => (
             <NavLink key={l.to} to={l.to} end={l.to === '/'} onClick={close}>
               {l.label}
             </NavLink>

@@ -1,32 +1,22 @@
-import { Link } from 'react-router-dom'
-import { site, services } from '../data/site.js'
-import ServiceCard from '../components/ServiceCard.jsx'
+import usePageTitle from '../hooks/usePageTitle.js'
+import Hero from '../components/sections/Hero.jsx'
+import ServicesPreview from '../components/sections/ServicesPreview.jsx'
+import WhyChooseUs from '../components/sections/WhyChooseUs.jsx'
+import Process from '../components/sections/Process.jsx'
+import Testimonials from '../components/sections/Testimonials.jsx'
+import CtaBanner from '../components/sections/CtaBanner.jsx'
 
 export default function Home() {
+  usePageTitle()
+
   return (
     <>
-      <section className="hero">
-        <div className="container">
-          <h1>{site.tagline}</h1>
-          <p>
-            Professional waterproofing for homes and commercial buildings — roofs,
-            basements, bathrooms, walls and tanks.
-          </p>
-          <div className="hero__actions">
-            <Link to="/contact" className="btn">Book a Free Inspection</Link>
-            <Link to="/services" className="btn btn--outline">Our Services</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section container">
-        <h2>What We Do</h2>
-        <div className="grid">
-          {services.slice(0, 3).map((s) => (
-            <ServiceCard key={s.id} {...s} />
-          ))}
-        </div>
-      </section>
+      <Hero />
+      <ServicesPreview />
+      <WhyChooseUs />
+      <Process />
+      <Testimonials />
+      <CtaBanner />
     </>
   )
 }

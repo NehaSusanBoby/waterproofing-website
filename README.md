@@ -16,13 +16,32 @@ npm run lint     # lint with oxlint
 
 ```
 src/
-  components/   Shared UI: Layout, Navbar, Footer, ServiceCard
-  pages/        Route pages: Home, Services, About, Contact, NotFound
-  data/site.js  Business details and services list (edit here first)
-  App.jsx       Route definitions
-  main.jsx      App entry (BrowserRouter)
-  index.css     Global styles and theme variables
+  components/
+    sections/     Homepage sections: Hero, ServicesPreview, WhyChooseUs,
+                  Process, Testimonials, CtaBanner
+    Layout.jsx    Navbar + page + Footer + WhatsApp button
+    Navbar.jsx, Footer.jsx, PageHeader.jsx, SectionHeading.jsx,
+    ServiceCard.jsx, ScrollToTop.jsx, WhatsAppButton.jsx
+  pages/          Home, Services, ServiceDetail, Projects, About, Faq,
+                  Contact, NotFound
+  hooks/          usePageTitle (browser tab titles)
+  data/site.js    ALL site content: business details, services, FAQs,
+                  testimonials, projects (edit here first)
+  App.jsx         Route definitions
+  index.css       Global styles and theme colours
 ```
+
+## Pages
+
+| URL                 | Page                                   |
+| ------------------- | -------------------------------------- |
+| `/`                 | Home                                   |
+| `/services`         | All services                           |
+| `/services/:id`     | Single service (e.g. `/services/roof`) |
+| `/projects`         | Project gallery with category filter   |
+| `/about`            | About the company                      |
+| `/faq`              | Frequently asked questions             |
+| `/contact`          | Contact details and inspection form    |
 
 ## Next steps
 
