@@ -27,7 +27,7 @@ export default function Projects() {
               </button>
             ))}
           </div>
-          <div className="grid">
+          <div className="grid" data-reveal="stagger">
             {shown.map((p) => (
               <article key={p.id} className="project">
                 {/* Replace with a real photo: <img src={...} alt={p.title} /> */}

@@ -11,7 +11,7 @@ export default function About() {
     <>
       <PageHeader title={`About ${site.name}`} subtitle={site.tagline} />
       <section className="section">
-        <div className="container detail">
+        <div className="container detail" data-reveal="stagger">
           <div className="detail__main">
             <h2>Our Story</h2>
             <p>

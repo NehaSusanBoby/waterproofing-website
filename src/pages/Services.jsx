@@ -11,7 +11,7 @@ export default function Services() {
     <>
       <PageHeader title="Our Services" subtitle="Waterproofing solutions for every part of your building." />
       <section className="section">
-        <div className="container grid">
+        <div className="container grid" data-reveal="stagger">
           {services.map((s) => (
             <ServiceCard key={s.id} {...s} />
           ))}

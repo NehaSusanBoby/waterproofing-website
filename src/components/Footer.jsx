@@ -33,13 +33,16 @@ export default function Footer() {
         <div>
           <h4>Contact</h4>
           <ul>
+            <li>{site.owner}</li>
             <li><a href={`tel:${site.phone.replace(/\s/g, '')}`}>{site.phone}</a></li>
-            <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+            {site.email && <li><a href={`mailto:${site.email}`}>{site.email}</a></li>}
             <li>{site.address}</li>
             <li>{site.hours}</li>
           </ul>
         </div>
       </div>
+
+      <div className="footer__giant" aria-hidden="true">{site.name}</div>
       <p className="footer__copy">© {year} {site.name}. All rights reserved.</p>
     </footer>
   )

@@ -1,12 +1,15 @@
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { getLenis } from '../lib/anim.js'
 
-// Scrolls to the top of the page on every route change.
+// Jumps to the top of the page on every route change.
 export default function ScrollToTop() {
   const { pathname } = useLocation()
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
+  useLayoutEffect(() => {
+    const lenis = getLenis()
+    if (lenis) lenis.scrollTo(0, { immediate: true, force: true })
+    else window.scrollTo(0, 0)
   }, [pathname])
 
   return null

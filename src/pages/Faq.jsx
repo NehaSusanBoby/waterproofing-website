@@ -10,7 +10,7 @@ export default function Faq() {
     <>
       <PageHeader title="Frequently Asked Questions" />
       <section className="section">
-        <div className="container faq">
+        <div className="container faq" data-reveal="stagger">
           {faqs.map((f) => (
             <details key={f.q} className="faq__item">
               <summary>{f.q}</summary>

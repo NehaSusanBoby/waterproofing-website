@@ -17,12 +17,15 @@ export default function Contact() {
     <>
       <PageHeader title="Contact Us" subtitle="Book a free inspection or ask us anything." />
       <section className="section">
-        <div className="container contact">
+        <div className="container contact" data-reveal="stagger">
           <div className="contact__info">
             <h2>Get in touch</h2>
             <ul>
               <li><strong>Phone:</strong> <a href={`tel:${site.phone.replace(/\s/g, '')}`}>{site.phone}</a></li>
-              <li><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+              <li><strong>Contact person:</strong> {site.owner}</li>
+              {site.email && (
+                <li><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+              )}
               <li><strong>Address:</strong> {site.address}</li>
               <li><strong>Hours:</strong> {site.hours}</li>
             </ul>

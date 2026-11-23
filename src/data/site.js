@@ -1,16 +1,17 @@
 // Central place for all site content — edit here to update every page.
-// Everything below is placeholder content: replace with real business details.
+// Business details below are real; services text, reviews, projects and FAQs are still placeholders.
 
 export const site = {
-  name: 'AquaShield Waterproofing',
+  name: 'PK Tradings',
+  owner: 'Boby P Kuriakose',
   tagline: 'Keeping your property dry, strong and protected.',
   intro:
-    'Professional waterproofing for homes and commercial buildings — roofs, basements, bathrooms, walls and tanks.',
-  phone: '+91 00000 00000',
-  whatsapp: '910000000000',
-  email: 'info@example.com',
-  address: 'Your City, Your State',
-  hours: 'Mon – Sat, 9:00 AM – 7:00 PM',
+    'Professional waterproofing in Kothamangalam for homes and commercial buildings — roofs, basements, bathrooms, walls and tanks.',
+  phone: '+91 94477 64490',
+  whatsapp: '919447764490', // country code + number, no spaces or +
+  email: '', // add an email address here to show it on the site
+  address: 'Putheeckal Building, Near Kala Auditorium, Kothamangalam, Kerala 686691',
+  hours: 'Mon – Sat, 9:00 AM – 7:00 PM', // placeholder — confirm real hours
 }
 
 export const navLinks = [
@@ -81,11 +82,37 @@ export const features = [
   { title: 'Written Warranty', text: 'Every job comes with a clear warranty on the work.' },
 ]
 
-export const processSteps = [
-  { title: 'Inspection', text: 'We visit, check for moisture and identify the cause.' },
-  { title: 'Quotation', text: 'You get a clear written quote with the recommended solution.' },
-  { title: 'Treatment', text: 'Our team prepares the surface and applies the system.' },
-  { title: 'Warranty', text: 'We hand over the job with a warranty and care tips.' },
+// Steps shown in the pinned scroll scene on the home page
+export const storySteps = [
+  {
+    short: 'Leak',
+    title: 'Water always finds a way in.',
+    text: 'Rain, groundwater and daily use slowly push moisture through roofs, walls, bathrooms and basements — causing stains, peeling paint and damage.',
+  },
+  {
+    short: 'Inspect',
+    title: 'We find the real source.',
+    text: 'A free site inspection with moisture checks pinpoints exactly where water is getting in, so we fix the cause, not just the stain.',
+  },
+  {
+    short: 'Treat',
+    title: 'The right system, layer by layer.',
+    text: 'Surfaces are prepared and sealed with quality membranes, coatings and injections chosen for each part of your building.',
+  },
+  {
+    short: 'Protect',
+    title: 'A dry home, backed by warranty.',
+    text: 'Your property stays dry season after season — and every job comes with a written warranty.',
+  },
+]
+
+export const marqueeItems = [
+  'Roof Waterproofing',
+  'Basement Sealing',
+  'Bathroom Leak Fix',
+  'Exterior Wall Coating',
+  'Water Tank Lining',
+  'Crack Injection',
 ]
 
 export const stats = [

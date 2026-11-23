@@ -31,6 +31,21 @@ src/
   index.css       Global styles and theme colours
 ```
 
+## Animations
+
+Built with [GSAP](https://gsap.com) + ScrollTrigger and [Lenis](https://lenis.darkroom.engineering) smooth scrolling.
+
+| Piece | File |
+| --- | --- |
+| Loading screen (rising water + % counter) | `src/components/fx/Preloader.jsx` |
+| Rain with protective dome (hero), light rain (page headers) | `src/components/fx/RainCanvas.jsx` |
+| Pinned scroll story: Leak → Inspect → Treat → Protect | `src/components/sections/Story.jsx` |
+| Word-by-word headline reveal (`*word*` = gradient accent) | `src/components/fx/SplitText.jsx` |
+| Scroll reveal for anything with `data-reveal` / `data-reveal="stagger"` | `src/hooks/useReveal.js` |
+| Rolling waves, marquee, counters, hold-to-book button, scroll progress bar | `src/components/fx/` |
+
+Visitors with "reduce motion" turned on in their device settings get a calm, static version.
+
 ## Pages
 
 | URL                 | Page                                   |

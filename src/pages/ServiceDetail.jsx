@@ -18,7 +18,7 @@ export default function ServiceDetail() {
     <>
       <PageHeader title={service.title} subtitle={service.description} />
       <section className="section">
-        <div className="container detail">
+        <div className="container detail" data-reveal="stagger">
           <div className="detail__main">
             <h2>Overview</h2>
             <p>{service.details}</p>

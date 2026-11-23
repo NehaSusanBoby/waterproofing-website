@@ -7,14 +7,14 @@ export default function CtaBanner({
 }) {
   return (
     <section className="cta">
-      <div className="container cta__inner">
+      <div className="container cta__inner" data-reveal>
         <div>
           <h2>{title}</h2>
           <p>{text}</p>
         </div>
         <div className="cta__actions">
           <Link to="/contact" className="btn btn--light">Book Inspection</Link>
-          <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="btn btn--outline">
+          <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="btn btn--ghost">
             Call {site.phone}
           </a>
         </div>

@@ -1,15 +1,18 @@
 import { features } from '../../data/site.js'
-import SectionHeading from '../SectionHeading.jsx'
+import SplitText from '../fx/SplitText.jsx'
 
 export default function WhyChooseUs() {
   return (
     <section className="section section--alt">
       <div className="container">
-        <SectionHeading eyebrow="Why choose us" title="Done right, the first time" />
-        <div className="grid grid--4">
-          {features.map((f) => (
+        <div className="section-heading">
+          <span className="eyebrow" data-reveal>Why choose us</span>
+          <SplitText text="Done right, *the first time.*" />
+        </div>
+        <div className="grid grid--4" data-reveal="stagger">
+          {features.map((f, i) => (
             <div key={f.title} className="feature">
-              <span className="feature__check" aria-hidden="true">✓</span>
+              <span className="feature__num">0{i + 1}</span>
               <h3>{f.title}</h3>
               <p>{f.text}</p>
             </div>
